@@ -4,7 +4,12 @@ from utils.emotion_utils import analyze_sentiment
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# load_dotenv()
+os.environ["SPEECH_KEY"] = st.secrets["SPEECH_KEY"]
+os.environ["SPEECH_REGION"] = st.secrets["SPEECH_REGION"]
+os.environ["TEXT_KEY"] = st.secrets["TEXT_KEY"]
+os.environ["TEXT_ENDPOINT"] = st.secrets["TEXT_ENDPOINT"]
+
 
 st.title("🎙️ Emotion Voice Chatbot")
 st.markdown("Speak English. The bot will understand your emotion and respond with voice!")
